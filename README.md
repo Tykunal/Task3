@@ -18,7 +18,7 @@ The Music Player is a web application that allows users to play and enjoy their 
 - GitHub Pages (for hosting the application)
 
 ## Demo
-You can see the live demo of the Music Player by visiting [here](https://tykunal.github.io/music-player).
+You can see the live demo of the Music Player by visiting [here](https://tykunal.github.io/Task3).
 
 ## How to Use
 1. Visit the live demo link provided above.
