@@ -1,58 +1,115 @@
-body{
+/* Global styles */
+body {
     background: linear-gradient(45deg, black, #282C35);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
-}
-
-h1{
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Music player styles */
+  .main_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .current_song {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1 {
     color: whitesmoke;
-    position: absolute;
-    top: 500px;
-    left: 300px;
-}
-p{
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  p {
     color: whitesmoke;
-}
-
-img{
-    width: 500px;
-    height: 400px;
-    position: absolute;
-    left: 150px;
-    top: 90px;
-}
-p{
-    color: whitesmoke;
-    position: absolute;
-    top: 550px;
-    left: 360px;
-}
-#prev{
-    background-color: black;
+    font-size: 18px;
+  }
+  
+  button {
+    background-color: transparent;
     border: none;
-    position: absolute;
-    top: 600px;
-    left: 280px;
-}
-#play{
-    background-color: black;
-    border: none;
-    position: absolute;
-    top: 600px;
-    left: 370px;
-}
-#next{
-    background-color: black;
-    border: none;
-    position: absolute;
-    top: 600px;
-    left: 440px;
-}
-.prev{
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  button i {
+    font-size: 30px;
     color: whitesmoke;
-    height: 5vh;
-}
+  }
+  
+  /* Progress bar styles */
+  .progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+  }
+  
+  /* Play button styles */
+  #play {
+    background-color: red;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+  }
+  
+  #play i {
+    font-size: 50px;
+    color: whitesmoke;
+  }
+  
+@keyframes rotateImage {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Apply the animation to the song image */
+  img#cover_photo {
+    /* Your existing styles for the cover photo */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+    /* Add animation properties */
+    animation-name: rotateImage;
+    animation-duration: 10s; /* Set the duration of one complete rotation */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+    animation-play-state: paused; /* Pause the animation initially */
+  }
+  
+  /* Add a class to start the animation when the song is playing */
+  img#cover_photo.playing {
+    animation-play-state: running;
+  }
+  

@@ -13,15 +13,20 @@
     
     <div class="main_div">
 
-        <div class="current_song"></div>
+        <div class="current_song">
             <img src="" id="cover_photo"/>
             <h1 id="title"></h1>
             <p id="singer"></p>
             <button id="prev"><i class="fas fa-backward fa-3x prev"></i></button>
-            <button id="play"><i class="fas fa-play fa-3x prev"></i></button>
+            <button id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
             <button id="next"><i class="fas fa-forward fa-3x prev"></i></button>
         </div>
-        
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
         <div class="songs">
 
         </div>
